@@ -1,0 +1,8 @@
+cmsAuth:
+  clientId: cloudCMS
+  clientSecret: integrationPassword
+
+kafka_service:
+  KAFKA_TOPIC_NAME: subscriptions
+  KAFKA_SERVER: kafka-service
+  KAFKA_PORT: 9092

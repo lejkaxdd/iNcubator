@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='fav_ico.png')}}">
+    <title>CMS</title>
+</head>
+<body>
+    <h1>CMS Service</h1>
+    <h2>Create Subscription</h2>   
+    <form action="/api/v1/editor/create" method="post" id="createSubscription">
+        <div class="login__field">
+            <i class="login__icon fas fa-user"></i>
+            <input type="text" class="login__input" placeholder="Input subscription name" name="subscriptionName">
+        </div>
+        <div class="login__field">
+            <i class="login__icon fas fa-user"></i>
+            <input type="text" class="login__input" placeholder="Input subscription type (Essential, Extra, Deluxe)" name="subscriptionType">
+        </div>
+        <div class="login__field">
+            <i class="login__icon fas fa-lock"></i>
+            <input type="text" class="login__input" placeholder="Input validity period (Count of months: 1, 3, 6, 12)" name="validityPeriod">
+        </div>
+        <div class="login__field">
+            <i class="login__icon fas fa-lock"></i>
+            <input type="text" class="login__input" placeholder="Input subscription descpription (A subscription that gives you access to all the movies in the world)" name="subscriptionDescription">
+        </div>
+        <div class="login__field">
+            <i class="login__icon fas fa-lock"></i>
+            <input type="text" class="login__input" placeholder="Input deeplink for payment (https://BestShop.com/?params)" name="deeplinkPayment">
+        </div>
+        <div class="login__field">
+            <i class="login__icon fas fa-lock"></i>
+            <input type="text" class="login__input" placeholder="Input subscription cost (1000 RUB)" name="subscriptionCost">
+        </div>
+        <button class="button login__submit">
+            <span class="button__text">Create</span>
+            <i class="button__icon fas fa-chevron-right"></i>
+        </button>				
+    </form>
+    <script src="../static/createSubscription.js"></script>
+</body>
+</html>
